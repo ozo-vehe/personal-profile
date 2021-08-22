@@ -1,276 +1,290 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@font-face {
+    font-family: 'Courier New';
+    src: url('./images/CourierNewRegular.ttf');
+}
+
 * {
     --pry-color: #333333;
-    --bg-pry-color: #fff;
-    --bg-sec-color: #f8f8f8;
+    --color-two: #808080;
+    --bg-sec-color: #fcfcfc;
     --border-color: #dddddd;
+    --color-three: #344276;
 }
 body {
-    font-family: 'Roboto';
+    font-family: 'Montserrat';
     margin: 0px;
-    padding: 30px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0px;
     background-color: var(--bg-pry-color);
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 1.5;
     color: var(--pry-color);
 }
 
 #container {
-    width: 700px;
-    padding: 20px 30px;
+    width: 100%;
+    padding: 0px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
     box-sizing: border-box;
     background-color: var(--bg-sec-color);
     border-radius: 2px;
-    box-shadow: 0px 0px 3px var(--border-color);
 }
 h1 {
-    font-size: 34px;
+    font-family: 'Courier New';
+    font-size: 45px;
+    font-weight: 600;
 }
 
 h2 {
+    font-family: 'Courier New';
+    width: 90%;
+    border-bottom: 2px solid var(--border-color);
+    color: var(--color-three);
+    font-size: 30px;
+    text-transform: uppercase;
+}
+h3 {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 5px 0px;
+}
+
+ion-icon {
+    margin-right: 10px;
+    color: var(--color-three);
+    font-size: 30px;
+}
+
+/* Portfolio Header */
+.port-header {
+    padding: 5% 0px 2% 0px;
+    color: var(--bg-sec-color);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: linear-gradient(var(--color-two), var(--color-two)), url("./images/headerBgImg.png");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-attachment: scroll;
+}
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+/* port name */
+.port-name {
+    padding: 20px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.port-name img {
+    margin-bottom: 10px;
+    height: 140px;
+    display: inline;
+}
+.name {
+    padding: 10px;
+}
+.name h1 {
+    line-height: 1;
+    display: inline;
+    margin: 10px;
+    text-transform: capitalize;
+}
+.port-name p {
+    margin: 7px;
     font-size: 16px;
     text-transform: uppercase;
 }
-.port-employment h2,
-.port-profile h2,
-.port-education h2,
-h3 
-{
-    padding-left: 15px;
+.port-name button {
+    background-color: var(--bg-sec-color);
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0px;
+    padding: 10px 30px;
+    font-size: 18px;
+    transition: all 0.3s;
+    cursor: pointer;
 }
-
-.port-employment p,
-.port-profile p,
-.port-education p 
-{
-    padding-left: 15px;
-}
-p,
-ul {
-    font-weight: lighter;
-}
-span,
-h3 {
-    display: block;
-}
-span {
-    font-weight: lighter;
-}
-.profile,
-.employment,
-.education
-{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-ion-icon {
+.port-name button a {
+    font-family: 'Montserrat';
     color: var(--pry-color);
-    font-size: 18px;
-    margin-left: -5px;
+    text-decoration: none;
+}
+.port-name button:hover {
+    transform: scale(1.05);
 }
 
-
-
-/****************   Portfolio Name  ****************/
-.port-name {
-    width: 100%;
-    padding: 0px;
-    margin-bottom: 20px;
+/* port profile contact */
+.port-profile-contact {
+    width: 600px;
+    padding: 10px;
+    box-sizing: inherit;
 }
-.port-name h1 {
-    font-size: 34px;
-    margin: 7px 0px;
-    text-transform: uppercase;
-}
-.port-name p {
+/*  profile */
+.port-profile {
     margin: 0px;
-    font-size: 18px;
+    position: relative;
+}
+.port-profile h2 {
+    margin: 0px;
+    color: var(--bg-sec-color);
+}
+.port-profile ion-icon {
+    color: var(--bg-sec-color);
+}
+
+/* contact */
+.port-contact {
+    padding-top: 20px;
+}
+.port-contact p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     text-transform: capitalize;
+}
+.port-contact span {
+    width: 230px;
+}
+.port-contact p a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--bg-sec-color);
 }
 
 /************   Portfolio Details   ******************/
 .port-details {
-    order: 1;
-    width: 30%;
-    padding: 10px 5px;
+    padding: 30px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
     box-sizing: border-box;
-    text-align: center;
 }
-.port-details p {
-    margin: 10px 0px;
-}
-.port-details a {
-    color: var(--pry-color);
-}
-
-/*****************  Portfolio Profile   **************/
-.port-profile {
-    order: 2;
-    width: 65%;
-    padding: 10px 0px;
-    position: relative;
-}
-.port-profile::after {
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 2px;
-    height: 70%;
-    background-color: var(--pry-color);
-}
-
-/****************   Porfolio Skills *************/
-.port-skills {
-    order: 3;
-    width: 30%;
-    padding: 10px;
+/* employment */
+.port-employment {
+    width: 600px;
     box-sizing: border-box;
-    text-align: center;
 }
-.port-skills span {
+.port-employment p {
     margin: 5px 0px;
 }
-
-/************   Porfolio Employment ************/
-.port-employment {
-    order: 4;
-    width: 65%;
-    padding: 10px 0px;
-    position: relative;
+.port-employment .img-one {
+    width: 70px;
 }
-.port-employment::after {
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 2px;
-    height: 85%;
-    background-color: var(--pry-color);
+.port-employment .img-two {
+    width: 30px;
 }
-
-/*************  Portfolio Eductation    ************/
-.education {
-    margin-left: -10px;
+.employment {
+    display: flex;
+    align-items: center;
 }
+.employment-history {
+    padding: 0px 10px;
+    border-left: 2px solid var(--border-color);
+    margin-bottom: 20px;
+}
+/* eductation */
 .port-education {
-    padding: 10px 10px;
-    order: 5;
-    width: 65%;
-    margin: 20px 0px 0px 35%;
-    position: relative;
+    width: 600px;
+    box-sizing: inherit;
 }
-.port-education::after {
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 2px;
-    height: 85%;
-    background-color: var(--pry-color);
+.port-education p {
+    margin: 5px 0px;
+}
+.education {
+    display: flex;
+    align-items: center;
+}
+.education-history-title {
+    margin-bottom: 20px;
+    padding: 0px 10px;
+    border-left: 2px solid var(--border-color);
+}
+/* skills */
+.port-skills {
+    width: 600px;
+    padding: 5% 0px;
+    box-sizing: border-box;
+}
+.port-skills ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.port-skills ul li {
+    list-style-type: none;
+    width: 50%;
+    margin: 7px 0px;
+}
+/* qualities */
+.port-qualities {
+    width: 600px;
+    padding: 5% 0px;
+}
+.port-qualities ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.port-qualities ul li {
+    list-style-type: none;
+    width: 50%;
+    margin: 7px 0px;
 }
 
 /***********    Media Querry    ***************/
-@media screen and (max-width: 720px) {
-    #container {
-        width: 600px;
-    }
-}
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     body {
-        padding: 30px 10px;
-    }
-    #container {
-        width: 550px;
-        padding: 20px;
+        font-size: 14px;
+        line-height: 1.8;
     }
     h1 {
-        font-size: 34px;
+        font-size: 50px;
+        font-weight: 600;
     }
-    
-    h2 {
-        font-size: 18px;
-    }
-    .port-employment h2,
-    .port-profile h2,
-    .port-education h2,
-    h3 
-    {
-        padding-left: 10px;
-    }
-    
-    .port-employment p,
-    .port-profile p,
-    .port-education p 
-    {
-        padding-left: 10px;
-    }
-    
-    /****************   Portfolio Name  ****************/
-    .port-name h1 {
-        font-size: 36px;
-    }
-    
-    /************   Portfolio Details   ******************/
-    .port-details {
-        order: 2;
-        width: 100%;
-        text-align: left;
-    }
-    
-    /*****************  Portfolio Profile   **************/
-    .port-profile {
-        order: 1;
-        width: 100%;
-    }
-    .port-profile {
+    h3 {
         line-height: 1.5;
     }
-    .port-profile::after {
-        width: 0%;
-        height: 0px;
-        background: none;
+    
+    /* Portfolio Header */
+    .port-header {
+        box-sizing: border-box;
+        padding: 5% 20px 2% 20px;
     }
     
-    /****************   Porfolio Skills *************/
-    .port-skills {
-        order: 5;
-        width: 100%;
-        text-align: left;
+    /* port name */
+    .port-name p {
+        font-size: 14px;
     }
     
-    /************   Porfolio Employment ************/
-    .port-employment {
-        order: 3;
-        width: 100%;
-    }
-    .port-employment::after {
-        width: 0px;
-        height: 0px;
-        background: none;
-    }
+    /* port profile contact */
     
-    /*************  Portfolio Eductation    ************/
-    .port-education {
-        order: 4;
-        padding: 10px 0px;
-        width: 100%;
-        margin: 0px;
+    /*  profile */
+    
+    /* contact */
+
+    
+    /************   Portfolio Details   ******************/
+    /* employment */
+    .employment-history {
+        margin-bottom: 50px;
     }
-    .education {
-        margin-left: 0px;
-    }
-    .port-education::after {
-        width: 0px;
-        height: 0px;
-        background: none;
+    /* eductation */
+    .education-history-title {
+        margin-bottom: 50px;
     }
 }
