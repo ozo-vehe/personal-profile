@@ -161,7 +161,7 @@ ion-icon {
     width: 230px;
 }
 .port-contact p a {
-    text-trandform: lowercase;
+    text-transform: lowercase;
     text-decoration: none;
     font-weight: 600;
     color: var(--bg-sec-color);
