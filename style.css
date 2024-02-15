@@ -88,7 +88,6 @@ nav ul li a {
   text-decoration: none;
   border: thin solid white;
   padding: 10px 20px;
-  /* border-radius: 1px; */
   transition: 0.3s all;
 }
 
@@ -233,6 +232,12 @@ form button:hover {
   h1 {
     line-height: 0.9;
   }
+  nav {
+    font-size: 14px;
+  }
+  nav ul li a {
+  padding: 7px 15px;
+}
   #container {
     padding: 20px;
   }
