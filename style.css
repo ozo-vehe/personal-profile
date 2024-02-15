@@ -187,6 +187,34 @@ section {
 .project p {
   padding: 5px 10px;
 }
+
+.project_btn {
+  margin-bottom: 10px;
+}
+.project_btn button {
+  text-decoration: none;
+  color: var(--color-three);
+  padding: 10px 0px;
+  transition: 0.3s all;
+  background-color: var(--bg-sec-color);
+  border: none;
+}
+
+.project_btn button:hover a {
+  background-color: var(--color-three);
+  color: var(--bg-sec-color);
+}
+
+.project_btn a {
+  text-decoration: none;
+  color: var(--color-three);
+  padding: 10px 20px;
+  transition: 0.3s all;
+  background-color: var(--bg-sec-color);
+  border: thin solid var(--color-three);
+}
+
+
 .form_btn {
   width: 100%;
   text-align: center;
